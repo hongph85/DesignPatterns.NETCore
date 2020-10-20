@@ -1,5 +1,4 @@
-﻿using DesignPatterns.NETCore.Behaviors.Template;
-using System;
+﻿using System;
 
 namespace DesignPatterns.NETCore
 {
@@ -7,10 +6,20 @@ namespace DesignPatterns.NETCore
     {
         static void Main(string[] args)
         {
+            /*
+             * Demo Template pattern
+             */
             Console.WriteLine("1. Template Pattern:");
             Console.WriteLine("Using template 1");
-            var command = new Client() { Template = new Template1() };
-            command.Execute();
+            var command1 = new Behaviors.Template.Client();
+            command1.Execute();
+
+            /*
+             * Demo strategy pattern
+             */
+            Console.WriteLine("\r\n2. Strategy Pattern:");
+            var command2 = new Behaviors.Strategy.Client();
+            command2.Execute();
 
             Console.ReadLine();
         }

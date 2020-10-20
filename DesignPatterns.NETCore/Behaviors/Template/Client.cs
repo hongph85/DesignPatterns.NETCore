@@ -5,18 +5,14 @@ namespace DesignPatterns.NETCore.Behaviors.Template
 {
     public class Client : ICommand
     {
-        public BaseTemplate Template
-        {
-            get;set;
-        }
-
         public void Execute()
         {
-            if (Template.Step1())
-                Template.Step1();
+            var context = new Context();
+            context.Template = new Template1();
+            context.Execute();
 
-            if (Template.Step3())
-                Template.Step4();
+            context.Template = new Template2();
+            context.Execute();
         }
     }
 }
