@@ -21,6 +21,13 @@ namespace DesignPatterns.NETCore
             var command2 = new Behaviors.Strategy.Client();
             command2.Execute();
 
+            /*
+             * Demo State pattern
+             */
+            Console.WriteLine("\r\n2. Strategy Pattern:");
+            var command3 = new Behaviors.State.Client();
+            command3.Execute();
+
             Console.ReadLine();
         }
     }
