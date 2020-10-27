@@ -8,7 +8,11 @@ namespace DesignPatterns.NETCore.Behaviors.Template
         public void Execute()
         {
             var context = new Context();
-            context.DoSomeThing(new Template1());
+            context.Template = new Template1();
+            context.Execute();
+
+            context.Template = new Template2();
+            context.Execute();
         }
     }
 }

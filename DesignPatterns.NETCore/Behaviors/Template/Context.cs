@@ -6,12 +6,18 @@ namespace DesignPatterns.NETCore.Behaviors.Template
 {
     class Context
     {
-        public void DoSomeThing(BaseTemplate template)
+        public BaseTemplate Template
         {
-            if (template.Step1())
-                template.Step2();
-            if (template.Step3())
-                template.Step4();
+            get; set;
+        }
+
+        public void Execute()
+        {
+            if (Template.Step1())
+                Template.Step2();
+
+            if (Template.Step3())
+                Template.Step4();
         }
     }
 }
