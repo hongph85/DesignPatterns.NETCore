@@ -7,12 +7,19 @@ namespace DesignPatterns.NETCore.Behaviors.Template
     {
         public void Execute()
         {
-            var context = new Context();
-            context.Template = new Template1();
-            context.Execute();
+            var template = new Template1();
+            DoSomeThing(template);
 
-            context.Template = new Template2();
-            context.Execute();
+            var template2 = new Template2();
+            DoSomeThing(template2);
+        }
+
+        private static void DoSomeThing(BaseTemplate template)
+        {
+            template.Step1();
+            template.Step2();
+            template.Step3();
+            template.Step4();
         }
     }
 }
