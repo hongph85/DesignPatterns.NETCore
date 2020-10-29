@@ -28,6 +28,14 @@ namespace DesignPatterns.NETCore
             var command3 = new Behaviors.State.Client();
             command3.Execute();
 
+
+            /*
+             * Demo iterator
+             */
+            Console.WriteLine("\r\n3. Iterator Pattern:");
+            var command4 = new Behaviors.Iterator.Client();
+            command4.Execute();
+
             Console.ReadLine();
         }
     }
