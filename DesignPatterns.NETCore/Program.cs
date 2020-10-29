@@ -36,6 +36,13 @@ namespace DesignPatterns.NETCore
             var command4 = new Behaviors.Iterator.Client();
             command4.Execute();
 
+            /*
+             * Demo Observer
+             */
+            Console.WriteLine("\r\n3. Observer Pattern:");
+            var command5 = new Behaviors.Observer.Client();
+            command5.Execute();
+
             Console.ReadLine();
         }
     }
